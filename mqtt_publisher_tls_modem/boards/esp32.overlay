@@ -1,0 +1,11 @@
+&uart1 {
+       status = "okay";
+       current-speed = <9600>;
+       tx-pin = <25>;
+       rx-pin = <26>;
+       sim7080 {
+               compatible = "simcom,sim7080";
+               label = "sim7080";
+               mdm-power-gpios = <&gpio0 27 GPIO_ACTIVE_LOW>;
+       };
+};
